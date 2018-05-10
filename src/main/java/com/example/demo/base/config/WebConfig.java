@@ -33,8 +33,10 @@ import java.util.List;
 public class WebConfig implements WebSocketConfigurer {
     @Autowired
     private TimeInterceptor timeInterceptor;
+
     /**
      * fastJson
+     *
      * @return
      */
     @Bean
@@ -50,15 +52,17 @@ public class WebConfig implements WebSocketConfigurer {
 
     /**
      * 自定义servlet
+     *
      * @return
      */
     @Bean
     public ServletRegistrationBean servletRegistrationBean() {
-        return new ServletRegistrationBean(new ServletTest(),"/servletTest");
+        return new ServletRegistrationBean(new ServletTest(), "/servletTest");
     }
 
     /**
      * 自定义Filter
+     *
      * @return
      */
     @Bean
@@ -74,6 +78,7 @@ public class WebConfig implements WebSocketConfigurer {
 
     /**
      * 自定义Listener
+     *
      * @return
      */
     @Bean
@@ -83,6 +88,7 @@ public class WebConfig implements WebSocketConfigurer {
 
     /**
      * 自定义拦截器
+     *
      * @param registry
      */
     public void addInterceptors(InterceptorRegistry registry) {
@@ -91,6 +97,7 @@ public class WebConfig implements WebSocketConfigurer {
 
     /**
      * CORS 支持 粗粒度控制
+     *
      * @param registry
      */
     public void addCorsMappings(CorsRegistry registry) {

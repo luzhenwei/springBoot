@@ -18,6 +18,7 @@
         <root level="info">
             <appender-ref ref="CONSOLE" />
         </root>
+        <logger name="org.springframework.jdbc.core.JdbcTemplate" level="debug"/>
     </springProfile>
 
     <!-- 测试环境 -->
