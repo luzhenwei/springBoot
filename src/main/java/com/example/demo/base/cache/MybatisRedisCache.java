@@ -90,7 +90,7 @@ public class MybatisRedisCache implements Cache {
 
     @Override
     public int getSize() {
-        Long size = (Long) redisTemplate.execute(new RedisCallback<Long>() {
+        Long size = redisTemplate.execute(new RedisCallback<Long>() {
             @Override
             public Long doInRedis(RedisConnection connection) throws DataAccessException {
                 return connection.dbSize();

@@ -25,7 +25,7 @@ public class DepartmentServiceImplTest {
     private DepartmentService departmentService;
 
     @Test
-    public void getDepartments() throws Exception {
+    public void getDepartments() {
         departmentService.getDepartments();
     }
     // 测试mybatis缓存
